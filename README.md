@@ -13,6 +13,8 @@ Includes:
 
 Clone and run "npm install" to get up and running.
 
+Run build to make public files.
+
 Use "node app.js" to run on 127.0.0.1:300
 
 Customise and have fun!
