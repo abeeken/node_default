@@ -1,0 +1,15 @@
+# node_default
+A set of tasks and templates to kick off a basic node project.
+
+Includes:
+
+* Gulp
+* Express
+* Pug templating
+* SCSS for styles
+
+Clone and run "npm install" to get up and running.
+
+Use "node app.js" to run on 127.0.0.1:300
+
+Customise and have fun!
