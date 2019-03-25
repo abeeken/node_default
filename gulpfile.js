@@ -3,8 +3,17 @@ var pug = require('gulp-pug');
 var sass = require('gulp-sass');
 var cssnano = require('gulp-cssnano');
 var rename = require('gulp-rename');
+var del = require('del');
+var concat = require('gulp-concat');
+var uglify = require('gulp-uglify');
 
+var jsFiles = [
+    'src/js/example.js'
+];
 
+gulp.task('clean', function () {
+    return del('public/**/*');
+});
 
 gulp.task('views', function() {
     return gulp.src('src/views/*.pug')
@@ -27,4 +36,13 @@ gulp.task('minicss', function(){
         .pipe(gulp.dest('public/css'))
 });
 
-//gulp.task('build', gulp.series('clean', 'sass', 'minicss', 'makedist'), function(){});
+gulp.task('scripts', function(){
+    return gulp.src(jsFiles)
+        .pipe(concat('scripts.js'))
+        .pipe(gulp.dest('public/js'))
+        .pipe(rename('scripts.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('public/js'))
+});
+
+gulp.task('build', gulp.series('clean', 'sass', 'minicss', 'scripts'), function(){});
