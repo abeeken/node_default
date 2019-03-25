@@ -11,7 +11,9 @@
     "gulp-sass": "^4.0.2",
     "gulp-rename": "^1.4.0"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "del": "^4.0.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
