@@ -7,6 +7,9 @@ Includes:
 * Express
 * Pug templating
 * SCSS for styles
+* Bootstrap for layouts
+* Fontawesome for icons
+* JQuery for fun stuff
 
 Clone and run "npm install" to get up and running.
 
