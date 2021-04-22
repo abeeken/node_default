@@ -45,4 +45,4 @@ gulp.task('scripts', function(){
         .pipe(gulp.dest('public/js'))
 });
 
-gulp.task('build', gulp.series('clean', 'sass', 'minicss', 'scripts'), function(){});
+gulp.task('build', gulp.series('clean', 'sass', 'minicss', 'scripts', 'views'), function(){});
