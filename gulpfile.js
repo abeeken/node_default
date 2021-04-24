@@ -15,12 +15,6 @@ gulp.task('clean', function () {
     return del('public/**/*');
 });
 
-gulp.task('views', function() {
-    return gulp.src('src/views/*.pug')
-        .pipe(pug({}))
-        .pipe(gulp.dest('./public'))
-});
-
 gulp.task('sass', function(){
     return gulp.src('src/sass/style.scss')
         .pipe(sass())
@@ -45,4 +39,4 @@ gulp.task('scripts', function(){
         .pipe(gulp.dest('public/js'))
 });
 
-gulp.task('build', gulp.series('clean', 'sass', 'minicss', 'scripts', 'views'), function(){});
+gulp.task('build', gulp.series( 'clean', 'sass', 'minicss', 'scripts' ), function(){});
